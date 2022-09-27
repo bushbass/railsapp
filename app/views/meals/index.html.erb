@@ -2,13 +2,13 @@
 
 <h1>Meals</h1>
 
-<div id="meals">
+<div id="meals" style='display:flex'>
   <% @meals.each do |meal| %>
-    <%= render meal %>
+    <div class="card m-2 p-2" ><%= render meal %>
     <p>
       <%= link_to "Show this meal", meal %>
-    </p>
+    </p></div>
   <% end %>
 </div>
 
-<%= link_to "New meal", new_meal_path %>
+<%= link_to "New meal", new_meal_path, class:"btn btn-primary m-2" %>
